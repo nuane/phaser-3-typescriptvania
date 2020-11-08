@@ -1,47 +1,29 @@
 import 'phaser';
+import Boot from './bootScene';
+import TitleScene from './titleScene';
+import GameScene from './gameScene';
 
-export default class Demo extends Phaser.Scene
-{
-    constructor ()
-    {
-        super('demo');
-    }
+const DEFAULT_WIDTH: number = 320
+const DEFAULT_HEIGHT: number = 200
 
-    preload ()
-    {
-        this.load.image('logo', 'assets/phaser3-logo.png');
-        this.load.image('libs', 'assets/libs.png');
-        this.load.glsl('bundle', 'assets/plasma-bundle.glsl.js');
-        this.load.glsl('stars', 'assets/starfields.glsl.js');
-    }
-
-    create ()
-    {
-        this.add.shader('RGB Shift Field', 0, 0, 800, 600).setOrigin(0);
-
-        this.add.shader('Plasma', 0, 412, 800, 172).setOrigin(0);
-
-        this.add.image(400, 300, 'libs');
-
-        const logo = this.add.image(400, 70, 'logo');
-
-        this.tweens.add({
-            targets: logo,
-            y: 350,
-            duration: 1500,
-            ease: 'Sine.inOut',
-            yoyo: true,
-            repeat: -1
-        })
-    }
-}
-
-const config = {
+window.addEventListener('load', () => {
+  const config = {
     type: Phaser.AUTO,
-    backgroundColor: '#125555',
-    width: 800,
-    height: 600,
-    scene: Demo
-};
+    backgroundColor: '#ffffff',
+    parent: 'phaser-game',
+    scale: {
+      // The game will be scaled manually in the resize()
+      mode: Phaser.Scale.FIT,
+      width: DEFAULT_WIDTH,
+      height: DEFAULT_HEIGHT
+    },
 
-const game = new Phaser.Game(config);
+    scene: [Boot,TitleScene, GameScene],
+    // scene: [Boot,TitleScene],
+    // render:
+
+  }
+
+  const game = new Phaser.Game(config)
+
+})
