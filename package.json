@@ -18,7 +18,10 @@
         "url": "https://github.com/photonstorm/phaser3-typescript-project-template/issues"
     },
     "homepage": "https://github.com/photonstorm/phaser3-typescript-project-template#readme",
-    "dependencies": {},
+    "dependencies": {
+        "@types/node": "^17.0.0",
+        "moralis": "^0.0.130"
+    },
     "devDependencies": {
         "@rollup/plugin-replace": "^2.3.3",
         "phaser": "^3.24.1",
@@ -27,7 +30,7 @@
         "rollup-plugin-node-resolve": "^5.2.0",
         "rollup-plugin-serve": "^1.0.4",
         "rollup-plugin-typescript2": "^0.25.3",
-        "rollup-plugin-uglify": "^6.0.4",
+        "rollup-plugin-uglify": "^5.0.2",
         "typescript": "^3.9.7"
     }
 }

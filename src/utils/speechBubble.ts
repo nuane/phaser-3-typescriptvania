@@ -6,13 +6,14 @@ export default class SpeechBubble extends Phaser.GameObjects.Container {
   public actor: Phaser.GameObjects.Sprite;
   public quote: string;
 
-  constructor(scene: any, actor: Phaser.GameObjects.Sprite, config: SpeechBubbleConfig){
+  constructor(scene: any, actor: any, config: SpeechBubbleConfig){
     super(scene, actor.x, actor.y);
     scene.add.existing(this);
     scene.physics.world.enable(this);
-    scene.speeches.add(this); //private physics.group from gameScene
+    scene.speeches.add(this); //TODO variable from gameScene
+
     this.scene = scene;
-    this.quote = config.quote;
+
     this.actor = actor;
     this.name = actor.name;
 
@@ -20,12 +21,17 @@ export default class SpeechBubble extends Phaser.GameObjects.Container {
     this.body.setAllowGravity(false);
     this.body.setOffset(-150, -150);
 
-    this.setPosition(actor.x, actor.y-80);
+    this.setPosition(actor.x, actor.y-20);
     this.setActive(true);
     this.setAlpha(1);
 
-    let bubbleWidth = config.w;
-    let bubbleHeight = config.h;
+    //w: 120, h: 60, minDelay: 500, maxDelay: 1500,
+    this.quote = config.quote;
+
+    let bubbleWidth = config.w || 120;
+    let bubbleHeight = config.h || 60;
+
+
     let bubblePadding = 10;
     let arrowHeight = bubbleHeight / 4;
 
@@ -56,9 +62,10 @@ export default class SpeechBubble extends Phaser.GameObjects.Container {
     bubble.lineBetween(point2X, point2Y, point3X, point3Y);
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
-    let content = this.scene.add.text(0, 0, config.quote, {
+    let content = this.scene.add.text(0, 0, this.quote, {
       fontFamily: 'Times New Roman',
-      fontSize: 10, color: '#000000',
+      fontSize: `10`,
+      color: '#000000',
       align: 'center',
       wordWrap: { width: bubbleWidth - (bubblePadding * 2) }
     });

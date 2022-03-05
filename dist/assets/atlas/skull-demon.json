@@ -1,0 +1,494 @@
+{
+  "frames": {
+    "demon-idle1": {
+      "frame": {
+        "x": 193,
+        "y": 371,
+        "w": 160,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 144
+      }
+    },
+    "demon-idle2": {
+      "frame": {
+        "x": 579,
+        "y": 580,
+        "w": 160,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 144
+      }
+    },
+    "demon-idle3": {
+      "frame": {
+        "x": 579,
+        "y": 290,
+        "w": 160,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 144
+      }
+    },
+    "demon-idle4": {
+      "frame": {
+        "x": 579,
+        "y": 435,
+        "w": 160,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 144
+      }
+    },
+    "demon-idle5": {
+      "frame": {
+        "x": 579,
+        "y": 0,
+        "w": 160,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 144
+      }
+    },
+    "demon-idle6": {
+      "frame": {
+        "x": 579,
+        "y": 145,
+        "w": 160,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 144
+      }
+    },
+    "demon-attack1": {
+      "frame": {
+        "x": 386,
+        "y": 548,
+        "w": 192,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 176
+      }
+    },
+    "demon-attack2": {
+      "frame": {
+        "x": 193,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 176
+      }
+    },
+    "demon-attack3": {
+      "frame": {
+        "x": 193,
+        "y": 548,
+        "w": 192,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 176
+      }
+    },
+    "demon-attack4": {
+      "frame": {
+        "x": 386,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 176
+      }
+    },
+    "demon-attack5": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 176
+      }
+    },
+    "demon-attack6": {
+      "frame": {
+        "x": 386,
+        "y": 371,
+        "w": 192,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 176
+      }
+    },
+    "demon-breath1": {
+      "frame": {
+        "x": 0,
+        "y": 548,
+        "w": 192,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 176
+      }
+    },
+    "demon-breath2": {
+      "frame": {
+        "x": 0,
+        "y": 371,
+        "w": 192,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 176
+      }
+    },
+    "breath-blue1": {
+      "frame": {
+        "x": 161,
+        "y": 274,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-blue2": {
+      "frame": {
+        "x": 386,
+        "y": 274,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-blue3": {
+      "frame": {
+        "x": 483,
+        "y": 725,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-blue4": {
+      "frame": {
+        "x": 322,
+        "y": 725,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-blue5": {
+      "frame": {
+        "x": 386,
+        "y": 177,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-red1": {
+      "frame": {
+        "x": 193,
+        "y": 177,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-red2": {
+      "frame": {
+        "x": 0,
+        "y": 274,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-red3": {
+      "frame": {
+        "x": 0,
+        "y": 177,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-red4": {
+      "frame": {
+        "x": 0,
+        "y": 725,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    },
+    "breath-red5": {
+      "frame": {
+        "x": 161,
+        "y": 725,
+        "w": 160,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 96
+      }
+    }
+  },
+  "meta": {
+    "app": "https://www.leshylabs.com/apps/sstool/",
+    "version": "Leshy SpriteSheet Tool v0.8.4",
+    "image": "skull-demon.png",
+    "size": {
+      "w": 739,
+      "h": 821
+    },
+    "scale": 1
+  }
+}

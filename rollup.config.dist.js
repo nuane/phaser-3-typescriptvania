@@ -45,8 +45,10 @@ export default {
             include: [
                 'node_modules/eventemitter3/**',
                 'node_modules/phaser/**'
+                //include moralis node into rollup
+                'node_modules/moralis/**'
             ],
-            exclude: [ 
+            exclude: [
                 'node_modules/phaser/src/polyfills/requestAnimationFrame.js'
             ],
             sourceMap: false,

@@ -1,0 +1,414 @@
+{
+  "frames": {
+    "thing3": {
+      "frame": {
+        "x": 40,
+        "y": 118,
+        "w": 33,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 33,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 33,
+        "h": 45
+      }
+    },
+    "thing2": {
+      "frame": {
+        "x": 34,
+        "y": 0,
+        "w": 33,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 33,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 33,
+        "h": 45
+      }
+    },
+    "thing4": {
+      "frame": {
+        "x": 0,
+        "y": 22,
+        "w": 33,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 33,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 33,
+        "h": 45
+      }
+    },
+    "thing1": {
+      "frame": {
+        "x": 108,
+        "y": 0,
+        "w": 33,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 33,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 33,
+        "h": 45
+      }
+    },
+    "fire2": {
+      "frame": {
+        "x": 72,
+        "y": 90,
+        "w": 25,
+        "h": 6
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 25,
+        "h": 6
+      },
+      "sourceSize": {
+        "w": 25,
+        "h": 6
+      }
+    },
+    "fire1": {
+      "frame": {
+        "x": 72,
+        "y": 97,
+        "w": 25,
+        "h": 6
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 25,
+        "h": 6
+      },
+      "sourceSize": {
+        "w": 25,
+        "h": 6
+      }
+    },
+    "spider2": {
+      "frame": {
+        "x": 34,
+        "y": 46,
+        "w": 32,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 21
+      }
+    },
+    "spider3": {
+      "frame": {
+        "x": 72,
+        "y": 68,
+        "w": 32,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 21
+      }
+    },
+    "spider4": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 21
+      }
+    },
+    "spider1": {
+      "frame": {
+        "x": 108,
+        "y": 46,
+        "w": 32,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 21
+      }
+    },
+    "Ghost4": {
+      "frame": {
+        "x": 108,
+        "y": 68,
+        "w": 31,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 31,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 31,
+        "h": 44
+      }
+    },
+    "Ghost2": {
+      "frame": {
+        "x": 106,
+        "y": 118,
+        "w": 31,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 31,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 31,
+        "h": 44
+      }
+    },
+    "Ghost3": {
+      "frame": {
+        "x": 40,
+        "y": 68,
+        "w": 31,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 31,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 31,
+        "h": 44
+      }
+    },
+    "Ghost1": {
+      "frame": {
+        "x": 74,
+        "y": 118,
+        "w": 31,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 31,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 31,
+        "h": 44
+      }
+    },
+    "Enemy-Death2": {
+      "frame": {
+        "x": 142,
+        "y": 50,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 39,
+        "h": 49
+      }
+    },
+    "Enemy-Death3": {
+      "frame": {
+        "x": 68,
+        "y": 0,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 39,
+        "h": 49
+      }
+    },
+    "Enemy-Death1": {
+      "frame": {
+        "x": 0,
+        "y": 118,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 39,
+        "h": 49
+      }
+    },
+    "Enemy-Death5": {
+      "frame": {
+        "x": 142,
+        "y": 100,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 39,
+        "h": 49
+      }
+    },
+    "Enemy-Death6": {
+      "frame": {
+        "x": 0,
+        "y": 68,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 39,
+        "h": 49
+      }
+    },
+    "Enemy-Death4": {
+      "frame": {
+        "x": 142,
+        "y": 0,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 39,
+        "h": 49
+      }
+    }
+  },
+  "meta": {
+    "app": "https://www.leshylabs.com/apps/sstool/",
+    "version": "Leshy SpriteSheet Tool v0.8.4",
+    "image": "swamp.png",
+    "size": {
+      "w": 181,
+      "h": 167
+    },
+    "scale": 1
+  }
+}

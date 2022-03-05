@@ -1,12 +1,13 @@
 import 'phaser';
+
 import Boot from './bootScene';
-import TitleScene from './titleScene';
 import GameScene from './gameScene';
 
 const DEFAULT_WIDTH: number = 320
 const DEFAULT_HEIGHT: number = 200
 
 window.addEventListener('load', () => {
+
   const config = {
     type: Phaser.AUTO,
     backgroundColor: '#ffffff',
@@ -18,12 +19,9 @@ window.addEventListener('load', () => {
       height: DEFAULT_HEIGHT
     },
 
-    scene: [Boot,TitleScene, GameScene],
-    // scene: [Boot,TitleScene],
-    // render:
-
+    scene: [Boot, GameScene],
   }
 
   const game = new Phaser.Game(config)
 
-})
+});

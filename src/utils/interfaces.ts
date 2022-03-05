@@ -19,24 +19,47 @@ interface IStructures {
   [key: string]: INumbers | IBooleans | IValues;
 }
 
+//// TODO: used for oreh
 type State = () => void;
 interface States {
   idle: State;
   run: State;
   attack: State;
+  jump?: State;
   ...otherStates?: State[];
 }
 
 interface SpeechBubbleConfig {
-  w: number;
-  h: number;
-  minDelay: number;
-  maxDelay: number;
   quote: string;
+  w?: number;
+  h?: number;
+  minDelay?: number;
+  maxDelay?: number;
+}
+
+interface JumpConfig {
+  s: number;
+  h: number;
+  t: number;
+  amount: number;
+  counter: number;
+}
+
+interface SwingConfig {
+  ox: number;
+  oy: number;
+
+  acc: number;
+  vel: number;
+  angle: number;
+  dis: number;
 }
 
 
 export {
   States,
-  SpeechBubbleConfig
+  State,
+  SpeechBubbleConfig,
+  JumpConfig,
+  SwingConfig,
 }

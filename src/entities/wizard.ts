@@ -52,6 +52,11 @@ export default class Wizard extends Phaser.GameObjects.Sprite{
     this.flipX = true;
 
   }
+
+  public getResponse(callerSpeech: string) {
+    return false;
+  }
+
   private customProps(props){
     if (props === undefined) return;
     props.forEach(prop => {
@@ -100,8 +105,6 @@ export default class Wizard extends Phaser.GameObjects.Sprite{
   }
 }
 
-
-//TODO place in new file
 class FireBall extends Phaser.GameObjects.Sprite{
   public body: Phaser.Physics.Arcade.Body;
   public speed: number;
@@ -118,7 +121,7 @@ class FireBall extends Phaser.GameObjects.Sprite{
 
     // set setSize
     this.setOrigin(0.5, 0.5);
-    this.body.setSize(12,12, true);
+    this.body.setSize(24,12, true);
 
     scene.anims.create({
       key: "fireball",

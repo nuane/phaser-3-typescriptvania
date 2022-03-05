@@ -172,7 +172,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "hero-hurt",
+	"filename": "hero-hurt-1",
 	"frame": {"x":104,"y":117,"w":100,"h":59},
 	"rotated": false,
 	"trimmed": false,

@@ -11,10 +11,9 @@ export default class Exit extends Phaser.GameObjects.Image{
     scene.add.existing(this);
     scene.exits.add(this);
 
-
     // set Size
     this.setAlpha(0);
-    this.setPosition(params.x, params.y + params.height/2);
+    this.setPosition(params.x + params.width/2, params.y + params.height/2);
     this.body.setAllowGravity(false);
     this.body.setSize(params.width, params.height);
     let ev = params.properties.map(p => p.value);

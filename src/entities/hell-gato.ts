@@ -1,12 +1,16 @@
+import { SpeechBubbleConfig } from '../utils/interfaces';
+
 export default class HellGato extends Phaser.GameObjects.Sprite{
   body: Phaser.Physics.Arcade.Body;
   public scene: Phaser.Scene;
   public name: string = "hell_gato";
 
   private xDir: number = -1;
-  private speed: number = 90;
-  private turnTimerTrigger: number = 200;
+  private speed: number = -50;
+  private turnTimerTrigger: number = 50;
   private turnTimer: number = 0;
+
+  private response1: SpeechBubbleConfig = { w: 30, h: 30, minDelay: 100, maxDelay: 200, quote: `...` };
 
   constructor(scene,x,y){
     super(scene, x, y, "cemetery-atlas", "hell-gato-1");
@@ -40,8 +44,12 @@ export default class HellGato extends Phaser.GameObjects.Sprite{
     if(this.turnTimer >= this.turnTimerTrigger){
       this.turnTimer = 0;
       this.speed *= -1;
+      this.flipX = (this.flipX) ? false : true;
     }else{
       this.turnTimer++;
     }
+  }
+  getResponse(callerSpeech: string): SpeechBubbleConfig | boolean {
+    return false;
   }
 }

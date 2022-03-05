@@ -1,4 +1,4 @@
-import { States, SpeechBubbleConfig } from '../utils/interfaces';
+import { SpeechBubbleConfig } from '../utils/interfaces';
 
 export default class Ghost extends Phaser.GameObjects.Sprite{
   public body: Phaser.Physics.Arcade.Body;
@@ -6,14 +6,14 @@ export default class Ghost extends Phaser.GameObjects.Sprite{
   public player: Phaser.GameObjects.Sprite;
   public name: string = 'ghost';
 
-  private VTween: Phaser.Tweens.Tween;
+  public acc: number = 30;
 
-  private xDir: number = -1;
-  private speed: number = 90;
-  private turnTimerTrigger: number = 200;
-  private turnTimer: number = 200;
+  private isInvincible: boolean = false;
+  private invincibleFor: number = 1500;
+  private invincibleCounter: number = 0;
 
-  private response1: SpeechBubbleConfig = { w: 30, h: 30, minDelay: 100, maxDelay: 200, quote: `...` };
+  // private VTween: Phaser.Tweens.Tween;
+  private response1: SpeechBubbleConfig = { w: 30, h: 30, minDelay: 100, maxDelay: 200, quote: `Death Incarniate` };
 
   constructor(scene, config) {
     super(scene, config.x, config.y, "cemetery-atlas", "ghost-halo-1");
@@ -24,46 +24,59 @@ export default class Ghost extends Phaser.GameObjects.Sprite{
     scene.enemies.add(this);
 
     this.body.setAllowGravity(false);
-
-    // set Size
-    this.setPosition(config.x+26, config.y-34);
     this.body.setSize(14,33);
+    this.body.setMaxVelocity(100, 100);
+
     scene.anims.create({
       key: `${this.name}_float`,
       frames: scene.anims.generateFrameNames("cemetery-atlas", {
         prefix: "ghost-halo-",
         start: 1,
-        end: 8
+        end: 4
       }),
       frameRate: 10,
       repeat: -1
     });
     this.play("ghost_float");
-
-    this.VTween = scene.tweens.add({
-      targets: this,
-      x: config.x+50,
-      y: config.y+50,
-      duration: 1000,
-      yoyo: true,
-      repeat: -1
-    });
   }
 
   getResponse(callerSpeech: string): SpeechBubbleConfig | boolean {
-    console.log(callerSpeech);
     if (this.response1.quote === `...`){
       return false;
     } else {
-      return this.response1;
+      // return this.response1;
+      return false;
+    }
+  }
+  destroy(): void{
+    if (!this.isInvincible) {
+      this.isInvincible = true;
+      this.invincibleCounter = this.scene.time.now + this.invincibleFor;
     }
   }
 
   update(){
+
+    let acceleration = this.acc;
+    if (this.isInvincible) {
+      acceleration *= -1;
+      if (this.invincibleCounter <= this.scene.time.now) {
+        this.isInvincible = false;
+      }
+    }
+
   	if(this.x > this.player.x) {
+      this.body.setAccelerationX(-acceleration);
   		this.flipX = true;
   	} else {
+      this.body.setAccelerationX(acceleration);
   		this.flipX = false;
+  	}
+
+    if(this.y > this.player.y) {
+      this.body.setAccelerationY(-acceleration);
+  	} else {
+      this.body.setAccelerationY(acceleration);
   	}
   }
 

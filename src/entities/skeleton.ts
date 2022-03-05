@@ -1,18 +1,21 @@
-import { States, SpeechBubbleConfig } from '../utils/interfaces';
+import { SpeechBubbleConfig } from '../utils/interfaces';
 
 export default class Skeleton extends Phaser.GameObjects.Sprite{
   public body: Phaser.Physics.Arcade.Body;
   public scene: Phaser.Scene;
   public name: string = "skeleton";
   public player: Phaser.GameObjects.Sprite;
+  public isInvincible: boolean = true;
 
   private speed: number = 0;
-  private activeSpeed: number = 60;
+  private walkSpeed: number = 30;
   private spawnBehind: number;
   private spawnDistance: number;
   private spawnLocation: number;
 
   private response1: SpeechBubbleConfig = { w: 30, h: 30, minDelay: 100, maxDelay: 200, quote: `...` };
+
+  private debug: Phaser.GameObjects.Text;
 
   constructor(scene,x,y,player) {
     super(scene, x, y, "cemetery-atlas", "skeleton-clothed-1");
@@ -24,11 +27,12 @@ export default class Skeleton extends Phaser.GameObjects.Sprite{
 
     this.setPosition(x+26, y-34);
     this.setActive(false);
+    this.setAlpha(0);
     this.body.setAllowGravity(false);
 
     //add spawning and state logic
     this.spawnBehind = (Math.random() > 0.5) ? 1 : -1;
-    this.spawnDistance = Math.random() * 140 + 40;
+    this.spawnDistance = Math.random() * 200 + 200;
     this.spawnLocation =  this.spawnDistance * this.spawnBehind;
 
     this.state = 'sleeping'; //value default 0 in Phaser.GameObjects.Sprite
@@ -68,7 +72,7 @@ export default class Skeleton extends Phaser.GameObjects.Sprite{
     this.on('animationcomplete', (anim, frame) => {
       if (anim.key === "skeleton_rise"){
         this.state = 0;
-        this.speed = this.activeSpeed * this.spawnBehind;
+        this.speed = this.walkSpeed * this.spawnBehind;
         this.play("skeleton_walk");
       }
     }, this);
@@ -77,6 +81,11 @@ export default class Skeleton extends Phaser.GameObjects.Sprite{
     // this.audioRise = game.add.audio("rise");
     // this.audioRise.play();
 
+    this.debug = this.scene.add.text(this.x, this.y-50, ``, {
+      fontFamily: 'Times New Roman',
+      fontSize: '10', color: '#ffffff',
+      align: 'center'
+    });
   }
   private activateSkeleton(): void{
     // set Size
@@ -86,9 +95,11 @@ export default class Skeleton extends Phaser.GameObjects.Sprite{
     this.body.setAllowGravity(true);
 
     this.setActive(true);
+    this.setAlpha(1);
     this.play("skeleton_rise");
     this.flipX = (this.spawnBehind == 1) ? true : false;
     this.state = 'rising';
+    this.isInvincible = false;
   }
 
   getResponse(callerSpeech: string): SpeechBubbleConfig | boolean {
@@ -98,10 +109,15 @@ export default class Skeleton extends Phaser.GameObjects.Sprite{
       return this.response1;
     }
   }
-  
+
   update(): void{
+    // this.debug.setText(`${Math.floor(this.player.x - (this.x+this.spawnLocation))}   and test = ${test}`);
+    // this.debug.setPosition(this.x, this.y-50);
+
     //spawn in behind or in front
-    if (this.state === 'sleeping' && this.player.x > this.x + this.spawnLocation) this.activateSkeleton();
+    let playerToSpawn = this.player.x - (this.x+this.spawnLocation);
+    let inRange = (playerToSpawn > 0) ? (playerToSpawn < 30) ? true : false : false;
+    if (this.state === 'sleeping' && inRange) this.activateSkeleton();
 
     this.body.setVelocityX(this.speed);
 

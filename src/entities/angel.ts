@@ -4,7 +4,8 @@ export default class Angel extends Phaser.GameObjects.Sprite{
   public body: Phaser.Physics.Arcade.Body;
   public scene: Phaser.Scene;
 
-  private tweens: Phaser.Tweens.Tween[];
+  //// TODO: I don't ufllty understand Phaser's Tweens configuration
+  private tweens: any[];
   private timeline: Phaser.Tweens.Timeline;
   private timeline1: Phaser.Tweens.Timeline;
 
@@ -34,7 +35,7 @@ export default class Angel extends Phaser.GameObjects.Sprite{
 
     // set Size
     // this.setOrigin(0.5,0.5);
-    this.setPosition(config.x+26, config.y-34);
+    // this.setPosition(config.x+26, config.y-34);
     this.body.setSize(13,35);
     this.body.offset.y = 50;
 
@@ -59,8 +60,15 @@ export default class Angel extends Phaser.GameObjects.Sprite{
       repeat: 0
     });
 
+    //update angel with Phaser.Tween that's parsed from Tiled data
     this.play("angel-fly");
     if (this.tweens){
+      for (let i = 0; i < this.tweens.length; i++){
+        let tw = this.tweens[i];
+        if (tw.x != undefined && typeof(tw.x) == 'number') tw.x += this.x;
+        if (tw.y != undefined && typeof(tw.y) == 'number') tw.y += this.y;
+      }
+
       this.timeline = scene.tweens.timeline({
         targets: this,
         loop: -1,
@@ -71,17 +79,18 @@ export default class Angel extends Phaser.GameObjects.Sprite{
 
 
   getResponse(callerSpeech: string): SpeechBubbleConfig | boolean {
-    if (callerSpeech === `Have at you`){
-      return this.response4;
-      // return this.response1;
-    } else if (callerSpeech === this.response1.quote){
-      return this.response2;
-    } else if (callerSpeech === this.response2.quote){
-      this.stopSpeechCycle = true;
-      return this.response3;
-    } else {
-      return (this.stopSpeechCycle) ? false : this.response1;
-    }
+    return false;
+    // if (callerSpeech === `Have at you`){
+    //   return this.response4;
+    //   // return this.response1;
+    // } else if (callerSpeech === this.response1.quote){
+    //   return this.response2;
+    // } else if (callerSpeech === this.response2.quote){
+    //   this.stopSpeechCycle = true;
+    //   return this.response3;
+    // } else {
+    //   return (this.stopSpeechCycle) ? false : this.response1;
+    // }
   }
 
   //assign custom values onto sprite gameObject from Tiled map
