@@ -11,7 +11,11 @@ The maps need to be saved as a JSON file in dist/assets/map, and the tilesets ne
 # todo
 
 -the speaking mechanic needs to be refactored and redone
+
 -add more playable characters
+
 -add online multiplayer functionality
+
 -design levels and design bosses
+
 -write a generative multiplayer story with branching storylines correlated with player outcomes
