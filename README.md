@@ -1,35 +1,17 @@
-# Phaser 3 TypeScript Project Template
+# Phaser 3 with GothicVania assets
 
-This quick-start project template combines Phaser 3 with [TypeScript](https://www.typescriptlang.org/) and uses [Rollup](https://rollupjs.org) for bundling.
+A fork of [Phaser 3 TypeScript](https://github.com/photonstorm/phaser3-typescript-project-template) that uses assets from ansimuz's [GothicVania](https://ansimuz.itch.io/) asset pack as well as Tiled to create levels
 
-## Requirements
+# Integration with Tiled
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+[Tiled](mapeditor.org) is a 2D level editor that helps you develop the content of your game. Its primary feature is to edit tile maps of various forms, but it also supports free image placement as well as powerful ways to annotate your level with extra information used by the game. Tiled focuses on general flexibility while trying to stay intuitive.
 
-## Available Commands
+The maps need to be saved as a JSON file in dist/assets/map, and the tilesets need to be loaded from dist/assets/tileset. To add a background; add a custom property to map, name the property "background(x)" (x correlates with background layer), set the value of the property as a string, and then name the string from dist/assets/background selections.
 
-| Command | Description |
-|---------|-------------|
-| `npm install` | Install project dependencies |
-| `npm run watch` | Build project and open web server running project, watching for changes |
-| `npm run dev` | Builds project and open web server, but do not watch for changes |
-| `npm run build` | Builds code bundle with production settings (minification, no source maps, etc..) |
+# todo
 
-## Writing Code
-
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development
-server by running `npm run watch`. The first time you run this you should see the following demo run:
-
-
-After starting the development server with `npm run watch`, you can edit any files in the `src` folder
-and Rollup will automatically recompile and reload your server (available at `http://localhost:10001`
-by default).
-
-## Configuring Rollup
-
-* Edit the file `rollup.config.dev.js` to edit the development build.
-* Edit the file `rollup.config.dist.js` to edit the distribution build.
-
-You will find lots of comments inside the rollup config files to help you do this.
-
-Note that due to the build process involved, it can take around 20 seconds to build the initial bundle. Times will vary based on CPU and local drive speeds. The development config does not minify the code in order to save build time, but it does generate source maps. If you do not require these, disable them in the config to speed it up further.
+-the speaking mechanic needs to be refactored and redone
+-add more playable characters
+-add online multiplayer functionality
+-design levels and design bosses
+-write a generative multiplayer story with branching storylines correlated with player outcomes
