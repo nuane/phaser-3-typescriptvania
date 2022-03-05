@@ -2,13 +2,14 @@
 
 A fork of [Phaser 3 TypeScript](https://github.com/photonstorm/phaser3-typescript-project-template) that uses assets from ansimuz's [GothicVania](https://ansimuz.itch.io/) asset pack as well as Tiled to create levels
 
-# Available commands
+## Available Commands
 
-| npm install	Install | project dependencies |
-| npm run watch |	Build project and open web server running project, watching for changes |
-| npm run dev |	Builds project and open web server, but do not watch for changes |
-| npm run build |	Builds code bundle with production settings (minification, no source maps, etc..) |
-
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install project dependencies |
+| `npm run watch` | Build project and open web server running project, watching for changes |
+| `npm run dev` | Builds project and open web server, but do not watch for changes |
+| `npm run build` | Builds code bundle with production settings (minification, no source maps, etc..) |
 
 # Integration with Tiled
 
